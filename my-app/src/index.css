@@ -1,0 +1,41 @@
+:root {
+  --color-bg: #F8F6F3;
+  --color-accent1: #D8C4A0;
+  --color-accent2: #B5947D;
+  --color-text: #2E2E2E;
+  --font-title: 'Shippori Mincho B1', serif;
+  --font-body: 'Noto Sans TC', sans-serif;
+  --font-serif: 'Noto Serif TC', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
