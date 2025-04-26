@@ -48,7 +48,7 @@ const FixedHeaderElements = styled.div`
   pointer-events: none; // 下層要素のクリックを可能にする
 `;
 
-const FixedLogo = styled.div`
+const FixedLogo = styled.a`
   width: 50px;
   height: 50px;
   background-image: url('/haku_gashi_tw/logo.png');
@@ -57,6 +57,8 @@ const FixedLogo = styled.div`
   background-repeat: no-repeat;
   margin-right: auto;
   pointer-events: auto; // ロゴだけクリック可能に
+  cursor: pointer;
+  display: block;
 `;
 
 const FixedMenuButtonContainer = styled.div`
@@ -518,7 +520,7 @@ function App() {
     <Container>
       {/* 固定ヘッダー要素 - スクロールしても表示 */}
       <FixedHeaderElements>
-        <FixedLogo />
+        <FixedLogo href="https://twsho.github.io/haku_gashi_tw/" />
         <FixedMenuButtonContainer>
           <MenuButton onClick={toggleMenu} aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}>
             <MenuButtonInner>
