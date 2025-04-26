@@ -7,6 +7,10 @@ const Container = styled.div`
   max-width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
+  background-image: url('/haku_gashi_tw/bg.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 `;
 
 const Section = styled.section`
@@ -28,6 +32,35 @@ const Header = styled.div`
   padding: 0.7rem 1.5rem;
   background-color: var(--color-bg);
   z-index: 1010;
+`;
+
+// 固定ヘッダー要素
+const FixedHeaderElements = styled.div`
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 1020;
+  pointer-events: none; // 下層要素のクリックを可能にする
+`;
+
+const FixedLogo = styled.div`
+  width: 50px;
+  height: 50px;
+  background-image: url('/haku_gashi_tw/logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: auto;
+  pointer-events: auto; // ロゴだけクリック可能に
+`;
+
+const FixedMenuButtonContainer = styled.div`
+  pointer-events: auto; // メニューボタンだけクリック可能に
 `;
 
 const Logo = styled.div`
@@ -95,6 +128,7 @@ const SectionTitle = styled.h2`
   margin-bottom: 2rem;
   position: relative;
   display: inline-block;
+  text-align: center;
   
   &:after {
     content: '';
@@ -105,6 +139,13 @@ const SectionTitle = styled.h2`
     height: 3px;
     background-color: var(--color-accent1);
   }
+`;
+
+// セクション内容を中央寄せにするためのスタイル
+const SectionTitleContainer = styled.div`
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
 `;
 
 const AboutContent = styled.div`
@@ -237,21 +278,37 @@ const InstagramPost = ({ postUrl }) => {
       </blockquote>
     </InstagramEmbed>
   );
-};
+ };
 
 // フッター
 const Footer = styled.footer`
   background-color: var(--color-accent2);
   color: white;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;  /* 2rem から 1rem に変更して縦幅を縮小 */
   text-align: center;
   position: relative;
+  background-image: url('/haku_gashi_tw/hd.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);  /* 80%の不透明度の黒 */
+    z-index: 0;
+  }
 `;
 
 const FooterContent = styled.div`
   position: relative;
   max-width: 600px;
   margin: 0 auto;
+  z-index: 1;  /* コンテンツを半透明オーバーレイの上に表示 */
 `;
 
 const InstagramLink = styled.a`
@@ -320,6 +377,9 @@ const MenuPanel = styled.div`
   width: 250px;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.85);
+  background-image: url('/haku_gashi_tw/bg.png');
+  background-size: cover;
+  background-position: center;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   padding: 5rem 1.5rem 2rem;
   z-index: 1001;
@@ -456,16 +516,36 @@ function App() {
 
   return (
     <Container>
+      {/* 固定ヘッダー要素 - スクロールしても表示 */}
+      <FixedHeaderElements>
+        <FixedLogo />
+        <FixedMenuButtonContainer>
+          <MenuButton onClick={toggleMenu} aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}>
+            <MenuButtonInner>
+              <MenuButtonLine isOpen={isMenuOpen} />
+              <MenuButtonLine isOpen={isMenuOpen} />
+              <MenuButtonLine isOpen={isMenuOpen} />
+            </MenuButtonInner>
+          </MenuButton>
+        </FixedMenuButtonContainer>
+      </FixedHeaderElements>
+      
       {/* ヘッダーセクション */}
       <Header>
-        <Logo></Logo>
-        <MenuButton onClick={toggleMenu} aria-label={isMenuOpen ? "メニューを閉じる" : "メニューを開く"}>
-          <MenuButtonInner>
-            <MenuButtonLine isOpen={isMenuOpen} />
-            <MenuButtonLine isOpen={isMenuOpen} />
-            <MenuButtonLine isOpen={isMenuOpen} />
-          </MenuButtonInner>
-        </MenuButton>
+        {/* オリジナルのロゴは非表示にして位置だけ保持 */}
+        <div style={{ opacity: 0, visibility: 'hidden' }}>
+          <Logo></Logo>
+        </div>
+        {/* オリジナルのメニューボタンは視覚的に非表示にするが、レイアウト上の位置は保持 */}
+        <div style={{ opacity: 0, visibility: 'hidden' }}>
+          <MenuButton aria-hidden="true">
+            <MenuButtonInner>
+              <MenuButtonLine />
+              <MenuButtonLine />
+              <MenuButtonLine />
+            </MenuButtonInner>
+          </MenuButton>
+        </div>
       </Header>
       
       {/* メニューパネル */}
@@ -499,7 +579,9 @@ function App() {
       
       {/* Aboutセクション */}
       <Section ref={aboutRef}>
-        <SectionTitle>關於</SectionTitle>
+        <SectionTitleContainer>
+          <SectionTitle>關於</SectionTitle>
+        </SectionTitleContainer>
         <AboutContent>
           <p>這是一間壽命只有三年的聖代刨冰店</p>
           <p>12季 約26000個席</p>
@@ -512,7 +594,9 @@ function App() {
       
       {/* メニューセクション */}
       <MenuSection ref={menuRef}>
-        <SectionTitle>聖代刨冰</SectionTitle>
+        <SectionTitleContainer>
+          <SectionTitle>聖代刨冰</SectionTitle>
+        </SectionTitleContainer>
         <MenuGrid>
           <MenuItem>
             <MenuImage image="/haku_gashi_tw/menu1.jpg" />
@@ -542,7 +626,9 @@ function App() {
       
       {/* お知らせセクション */}
       <NoticeSection ref={noticeRef}>
-        <SectionTitle>預約・訊息</SectionTitle>
+        <SectionTitleContainer>
+          <SectionTitle>預約・訊息</SectionTitle>
+        </SectionTitleContainer>
         <NoticeText>
           📅 目前尚在準備中，敬請期待。<br />
           所有更新將於 Instagram 公布。
@@ -551,7 +637,9 @@ function App() {
       
       {/* インスタグラムギャラリー */}
       <GallerySection ref={instagramRef}>
-        <SectionTitle>Instagram</SectionTitle>
+        <SectionTitleContainer>
+          <SectionTitle>Instagram</SectionTitle>
+        </SectionTitleContainer>
         <InstagramContainer>
           <InstagramPost postUrl={instagramPost} />
         </InstagramContainer>
@@ -563,8 +651,7 @@ function App() {
           <InstagramLink href="https://www.instagram.com/haku_gashi_tw" target="_blank" rel="noopener noreferrer">
             <FaInstagram /> haku_gashi_tw
           </InstagramLink>
-          <p>所在地：台中市（詳細地址未定）</p>
-          <p>開放日與營業時間請見 IG 公告</p>
+          <p>台中市（詳細地址未定）</p>
         </FooterContent>
       </Footer>
     </Container>
