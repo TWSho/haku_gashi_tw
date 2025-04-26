@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/haku_gashi_tw/static/css/main.8685306b.css",
-    "main.js": "/haku_gashi_tw/static/js/main.503c124a.js",
+    "main.js": "/haku_gashi_tw/static/js/main.ffc94253.js",
     "index.html": "/haku_gashi_tw/index.html",
     "main.8685306b.css.map": "/haku_gashi_tw/static/css/main.8685306b.css.map",
-    "main.503c124a.js.map": "/haku_gashi_tw/static/js/main.503c124a.js.map"
+    "main.ffc94253.js.map": "/haku_gashi_tw/static/js/main.ffc94253.js.map"
   },
   "entrypoints": [
     "static/css/main.8685306b.css",
-    "static/js/main.503c124a.js"
+    "static/js/main.ffc94253.js"
   ]
 }
