@@ -561,7 +561,7 @@ function App() {
       <Hero>
         <HeroImage />
         <HeroText>
-          <HeroSubtitle>白のやわらかさ、静かにとける時間</HeroSubtitle>
+          {/* <HeroSubtitle>白のやわらかさ、静かにとける時間</HeroSubtitle> */}
         </HeroText>
       </Hero>
       
@@ -591,16 +591,16 @@ function App() {
           <MenuItem>
             <MenuImage image="/haku_gashi_tw/menu_kiwi.JPG" />
             <MenuInfo>
-              <MenuName>三色奇異果</MenuName>
-              <MenuDescription>奇異果、葡萄柚與茉莉花三重奏，清新香氣交織</MenuDescription>
+              <MenuName>奇異果 \ 葡萄柚 \ 茉莉花</MenuName>
+              <MenuDescription>三色奇異果 /  葡萄柚泡泡 / 百香果蛋白餅 / 百香果晶球 /茉莉花香緹</MenuDescription>
             </MenuInfo>
           </MenuItem>
           <MenuItem>
             <MenuImage image="/haku_gashi_tw/menu_goma.JPG" />
             <MenuInfo>
-              <MenuName>芝麻</MenuName>
+              <MenuName>芝麻 \ 焙茶 \ 玄米</MenuName>
               <MenuDescription>
-                芝麻、焙茶、玄米與白玉，香氣濃郁，口感層次豐富
+                濃黑芝麻 /  淡黑芝麻 /  鹹乳酪 /  玄米粒 / 一保堂焙茶香緹 / 白玉糰子
               </MenuDescription>
             </MenuInfo>
           </MenuItem>
