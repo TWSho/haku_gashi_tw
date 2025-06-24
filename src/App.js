@@ -177,14 +177,15 @@ const MenuItem = styled.div`
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  
+  min-height: 400px;
+
   &:hover {
     transform: translateY(-5px);
   }
 `;
 
 const MenuImage = styled.div`
-  height: 200px;
+  height: 350px;
   background-image: url(${props => props.image || 'https://source.unsplash.com/random/400x400/?dessert'});
   background-size: cover;
   background-position: center;
