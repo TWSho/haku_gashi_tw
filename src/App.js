@@ -88,7 +88,7 @@ const Hero = styled.div`
 const HeroImage = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url('/haku_gashi_tw/hero.jpg'); // ヒーロー画像
+  background-image: url('/haku_gashi_tw/store1.JPG'); // ヒーロー画像
   background-size: cover;
   background-position: center;
 `;
@@ -585,12 +585,14 @@ function App() {
           <SectionTitle>關於</SectionTitle>
         </SectionTitleContainer>
         <AboutContent>
-          <p>這是一間壽命只有三年的聖代刨冰店</p>
-          <p>12季 約26000個席</p>
-          <p>這三年裡會復刻記憶中</p>
-          <p>閉眼享受的甜點</p>
-          <p>無數個細節會藏在Haku裡</p>
-          <p>不用尋思 Haku 會告訴你</p>
+          <p>這是一間聖代刨冰店</p>
+          <p>吃刨冰的同時能夠享有吃聖代的層次</p>
+          <p>在各個季節推出當季限定旬果物</p>
+          <p>重感官體驗</p>
+          <p>從挑選食器到口味組合</p>
+          <p>小細節不僅僅藏在冰裡，還有服務裡並讓人們吃懂、看懂、且感受到</p>
+          <p>不只是吃個冰</p>
+          <p>是能帶著不一樣的收穫離開。</p>
         </AboutContent>
       </Section>
       
@@ -601,26 +603,19 @@ function App() {
         </SectionTitleContainer>
         <MenuGrid>
           <MenuItem>
-            <MenuImage image="/haku_gashi_tw/menu1.jpg" />
+            <MenuImage image="/haku_gashi_tw/menu_kiwi.JPG" />
             <MenuInfo>
-              <MenuName>草莓白雪聖代</MenuName>
-              <MenuDescription>以當季草莓結合手作奶霜，營造出冬雪融化般的柔滑體驗。</MenuDescription>
+              <MenuName>三色奇異果</MenuName>
+              <MenuDescription>奇異果、葡萄柚與茉莉花三重奏，清新香氣交織</MenuDescription>
             </MenuInfo>
           </MenuItem>
-          
           <MenuItem>
-            <MenuImage image="/haku_gashi_tw/menu2.jpg" />
+            <MenuImage image="/haku_gashi_tw/menu_goma.JPG" />
             <MenuInfo>
-              <MenuName>焙茶白玉冰</MenuName>
-              <MenuDescription>日本焙茶與手作白玉完美結合，茶香與米香層層堆疊。</MenuDescription>
-            </MenuInfo>
-          </MenuItem>
-          
-          <MenuItem>
-            <MenuImage image="/haku_gashi_tw/menu3.jpg" />
-            <MenuInfo>
-              <MenuName>焦糖牛奶雪花冰</MenuName>
-              <MenuDescription>手炒焦糖與鮮乳交織，香濃綿密。</MenuDescription>
+              <MenuName>芝麻</MenuName>
+              <MenuDescription>
+                芝麻、焙茶、玄米與白玉，香氣濃郁，口感層次豐富
+              </MenuDescription>
             </MenuInfo>
           </MenuItem>
         </MenuGrid>
