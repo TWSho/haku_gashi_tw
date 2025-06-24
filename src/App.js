@@ -653,7 +653,7 @@ function App() {
           <InstagramLink href="https://www.instagram.com/haku_gashi_tw" target="_blank" rel="noopener noreferrer">
             <FaInstagram /> haku_gashi_tw
           </InstagramLink>
-          <p>台中市（詳細地址未定）</p>
+          <p>台中市中區光復路42-3號2樓</p>
         </FooterContent>
       </Footer>
     </Container>
