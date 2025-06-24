@@ -285,26 +285,11 @@ const InstagramPost = ({ postUrl }) => {
 
 // フッター
 const Footer = styled.footer`
-  background-color: var(--color-accent2);
+  background-color: rgba(0,0,0,0.6);
   color: white;
   padding: 1rem 1.5rem;  /* 2rem から 1rem に変更して縦幅を縮小 */
   text-align: center;
   position: relative;
-  background-image: url('/haku_gashi_tw/hd.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);  /* 80%の不透明度の黒 */
-    z-index: 0;
-  }
 `;
 
 const FooterContent = styled.div`
