@@ -7,7 +7,7 @@ const Container = styled.div`
   max-width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
-  background-image: url('/haku_gashi_tw/bg.png');
+  background-image: url('/haku_gashi_tw/bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -365,7 +365,7 @@ const MenuPanel = styled.div`
   width: 250px;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.85);
-  background-image: url('/haku_gashi_tw/bg.png');
+  background-image: url('/haku_gashi_tw/bg.jpg');
   background-size: cover;
   background-position: center;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
