@@ -151,7 +151,6 @@ const SectionTitleContainer = styled.div`
 `;
 
 const AboutContent = styled.div`
-  font-family: var(--font-serif);
   line-height: 1.8;
   max-width: 600px;
 `;
@@ -572,13 +571,15 @@ function App() {
         </SectionTitleContainer>
         <AboutContent>
           <p>這是一間聖代刨冰店</p>
-          <p>吃刨冰的同時能夠享有吃聖代的層次</p>
-          <p>在各個季節推出當季限定旬果物</p>
-          <p>重感官體驗</p>
-          <p>從挑選食器到口味組合</p>
-          <p>小細節不僅僅藏在冰裡，還有服務裡並讓人們吃懂、看懂、且感受到</p>
-          <p>不只是吃個冰</p>
-          <p>是能帶著不一樣的收穫離開。</p>
+          <p>是把「聖代甜點的概念」放到一碗會融化的「日式刨冰」裡</p>
+          <p>每一口的層次會隨著時間及冰體的流逝在變化</p>
+          <p>獨一無二的外型，口感味道上的層次變化</p>
+          <p>也是以吃懂為設計主軸！</p>
+          <p>重感官的體驗，會在你踏入店裡的那一瞬間就由我主導</p>
+          <br />
+          <p>若吃甜點不想再踩雷，也歡迎訂閱我的電子報～</p>
+          <p>教你如何「用看的👀知道甜點好不好吃」</p>
+          <a href="https://berniepastry.kit.com/" style={{ color: '#B5947D', textDecoration: 'underline' }}>https://berniepastry.kit.com/</a>
         </AboutContent>
       </Section>
       
@@ -589,18 +590,29 @@ function App() {
         </SectionTitleContainer>
         <MenuGrid>
           <MenuItem>
-            <MenuImage image="/haku_gashi_tw/menu_kiwi.JPG" />
+            <MenuImage image="/haku_gashi_tw/menu_goma.jpg" />
             <MenuInfo>
-              <MenuName>奇異果 \ 葡萄柚 \ 茉莉花</MenuName>
-              <MenuDescription>三色奇異果 /  葡萄柚泡泡 / 百香果蛋白餅 / 百香果晶球 /茉莉花香緹</MenuDescription>
+              <MenuName>芝麻｜焙茶｜玄米</MenuName>
+              <MenuDescription>
+                濃黑芝麻 / 淡黑芝麻 / 鹹乳酪 / 玄米粒 / 一保堂焙茶香緹 / 白玉糰子
+              </MenuDescription>
             </MenuInfo>
           </MenuItem>
           <MenuItem>
-            <MenuImage image="/haku_gashi_tw/menu_goma.JPG" />
+            <MenuImage image="/haku_gashi_tw/menu_edamame.jpg" />
             <MenuInfo>
-              <MenuName>芝麻 \ 焙茶 \ 玄米</MenuName>
+              <MenuName>毛豆｜醬油｜塩煉乳</MenuName>
               <MenuDescription>
-                濃黑芝麻 /  淡黑芝麻 /  鹹乳酪 /  玄米粒 / 一保堂焙茶香緹 / 白玉糰子
+                自家製塩煉乳 / 毛豆奶霜 / 自製毛豆乾 / 薄塩醬油乳酪 / 玄米茶香堤 / 玄米粒 / 糖漬柚子皮 / 綠檸檬棉花糖
+              </MenuDescription>
+            </MenuInfo>
+          </MenuItem>
+          <MenuItem>
+            <MenuImage image="/haku_gashi_tw/menu_mango.jpg" />
+            <MenuInfo>
+              <MenuName>芒果｜南瓜｜起司</MenuName>
+              <MenuDescription>
+                芒果淋醬 / 南瓜奶霜 / 糖漬柚子皮 / 新鮮芒果粒 / 帕馬森起司酥粒 / 南瓜乳酪
               </MenuDescription>
             </MenuInfo>
           </MenuItem>
